@@ -6,4 +6,5 @@ import ute.bt_api_mobile.entity.Category;
 
 @Repository
 public interface CategoryRepository extends JpaRepository<Category, Integer>{
+
 }
