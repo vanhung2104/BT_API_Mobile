@@ -14,7 +14,13 @@ public class ProductService implements IProductService {
     @Autowired
     ProductRepository productRepository;
 
+    @Override
     public List<Product> getProductsByCategoryId(Integer categoryId) {
         return productRepository.findByCategoryId(categoryId);
+    }
+
+    @Override
+    public List<Product> getTop10BestSellingProducts() {
+        return productRepository.findTop10ByOrderBySoldQuantityDesc();
     }
 }

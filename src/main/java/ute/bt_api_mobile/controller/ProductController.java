@@ -23,4 +23,10 @@ public class ProductController {
         List<Product> products = productService.getProductsByCategoryId(categoryId);
         return ResponseEntity.ok(products);
     }
+
+    @GetMapping("/best-selling")
+    public ResponseEntity<List<Product>> getTop10BestSellingProducts() {
+        List<Product> products = productService.getTop10BestSellingProducts();
+        return ResponseEntity.ok(products);
+    }
 }
