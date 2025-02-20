@@ -8,4 +8,6 @@ public interface IProductService {
     List<Product> getProductsByCategoryId(Integer categoryId);
 
     List<Product> getTop10BestSellingProducts();
+
+    List<Product> getTop10RecentProducts();
 }

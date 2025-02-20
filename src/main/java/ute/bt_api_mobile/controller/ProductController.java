@@ -29,4 +29,10 @@ public class ProductController {
         List<Product> products = productService.getTop10BestSellingProducts();
         return ResponseEntity.ok(products);
     }
+
+    @GetMapping("/recent")
+    public ResponseEntity<List<Product>> getTop10RecentProducts() {
+        List<Product> products = productService.getTop10RecentProducts();
+        return ResponseEntity.ok(products);
+    }
 }
